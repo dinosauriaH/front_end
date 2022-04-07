@@ -1,0 +1,33 @@
+<!-- <p *ngFor="let item of listSubjects">
+    <a [routerLink]="'/quiz/' + item.id">{{item.name}}</a>
+</p> -->
+
+
+<table class="table col-10">
+    <thead>
+        <!-- {{data | json}} -->
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên môn học</th>
+            <th scope="col">Mã môn học</th>
+            <th scope="col">Ảnh</th>
+            <th scope="col">Quản trị</th>
+            <th>
+                <a class="btn btn-success" href="/admin/mon-hoc/add">Thêm mới</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="data.length > 0">
+        <tr *ngFor="let Subject of data">
+            <th scope="row">{{Subject.id}}</th>
+            <td>{{Subject.Name}}</td>
+            <td>{{Subject.Code}}</td>
+            <td>{{Subject.Logo}}</td>
+            <td>
+                <a class="btn btn-success" [routerLink]="'/admin/mon-hoc/edit/'+ Subject.id">Sửa</a>
+                <a class="btn btn-danger" (click)="removeSub(Subject)">Xóa</a>
+                <a class="btn btn-info" [routerLink]="'/admin/cau-hoi/' + Subject.Code">Xem</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

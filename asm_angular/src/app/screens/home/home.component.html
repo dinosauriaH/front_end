@@ -1,0 +1,11 @@
+<div class="col-10 offset-1">
+    <div class="row mt-3" *ngIf="listSubjects.length > 0">
+        <div class="col-6" style="float: left;" *ngFor="let Sub of listSubjects">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a [routerLink]="'/quiz/'+ Sub.Code">{{Sub.Name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

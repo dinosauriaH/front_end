@@ -1,0 +1,32 @@
+<table class="table col-10">
+    <thead>
+        <!-- {{data | json}} -->
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Họ tên</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ảnh</th>
+            <th scope="col">Học phí</th>
+            <th scope="col">Quyền</th>
+            <th scope="col">Quản trị</th>
+            <th>
+                <a class="btn btn-success" href="/admin/sinh-vien/add">Thêm mới</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="data.length >0">
+        <tr *ngFor="let item of data">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.avatar}}</td>
+            <td>{{item.schoolfee}}</td>
+            <td>{{item.marks}}</td>
+            <!-- <td>{{item.roles}}</td> -->
+            <td>
+                <a class="btn btn-success" [routerLink]="'/admin/sinh-vien/edit/'+ 1">Sửa</a>
+                <a class="btn btn-danger" (click)="remove(item)">Xóa</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

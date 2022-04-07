@@ -1,0 +1,84 @@
+<!-- <div class="container-fluid">
+    <div class="col-6 offset-3">
+        <h4 class="text-center">Dang Nhap</h4>
+        <a [routerLink]="'/login'">Login với Google</a> {{loginForm.value | json}}
+        <form action="" [formGroup]="loginForm" (ngsubmit)="submitForm()">
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" formControlName="email" class="form-control">
+                <div *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].touched || loginForm.controls['email'].dirty">
+                    <label for="" class="text-danger" *ngIf="loginForm.controls['email']">Hay nhap email</label>
+                    <label for="" class="text-danger" *ngIf="loginForm.controls['email']">Sai dinh dang</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" formControlName="password" class="form-control">
+                <div *ngIf="loginForm.controls['password.errors'] && loginForm.controls['email'].touched">
+                    <label for="">Hay nhap password</label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <button [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+                <button [disabled]="loginForm.invalid" class="btn btn-primary">Login với Google</button>
+            </div>
+        </form>
+
+        
+
+        <div (click)="googleLogin()" class="col-12 button-login-google">Google Login</div>
+    </div> -->
+
+<form class="col-4">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="email" id="form2Example1" class="form-control" />
+        <label class="form-label" for="form2Example1">Email address</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="form2Example2" class="form-control" />
+        <label class="form-label" for="form2Example2">Password</label>
+    </div>
+
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                <label class="form-check-label" for="form2Example31"> Remember me </label>
+            </div>
+        </div>
+
+        <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <button type="button" class="btn col-12 btn-primary btn-block mb-4">Sign in</button>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+        <p>Not a member? <a href="#!">Register</a></p>
+        <p>or sign up with:</p>
+        <button type="button" class="btn btn-light btn-floating mx-1">
+            Facebook
+          </button>
+
+        <button (click)="googleLogin()" type="button" class="btn btn-light btn-floating mx-1">
+            Google
+          </button>
+
+        <button type="button" class="btn btn-light btn-floating mx-1">
+            Twitter
+          </button>
+
+        <button type="button" class="btn btn-light btn-floating mx-1">
+            Github
+          </button>
+    </div>
+</form>
