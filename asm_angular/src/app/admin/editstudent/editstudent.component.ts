@@ -12,7 +12,14 @@ export class EditstudentComponent implements OnInit {
   constructor(private editStudent: StudentService,
     private router: ActivatedRoute) { }
 id: string =""
-data: Array<any> = []
+data: Array<any> =[]
+formEdit= {
+  Name:"",
+  Email:"",
+  Avatar:"",
+  Schoolfee:"",
+  Roles:""
+}
   ngOnInit(): void {
     this.router.params.subscribe(par => {
       this.id = par['id']
@@ -21,9 +28,7 @@ data: Array<any> = []
     this.editStudent.lisStudentOne(this.id)
     .subscribe(res=>{
       this.data = res
-      console.log(res);
-      
+      console.log(this.data);     
     })
   }
-
 }
