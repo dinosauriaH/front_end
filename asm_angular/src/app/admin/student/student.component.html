@@ -24,7 +24,7 @@
             <td>{{item.marks}}</td>
             <!-- <td>{{item.roles}}</td> -->
             <td>
-                <a class="btn btn-success" [routerLink]="'/admin/sinh-vien/edit/'+ 1">Sửa</a>
+                <a class="btn btn-success" [routerLink]="'/admin/sinh-vien/edit/'+ item.id">Sửa</a>
                 <a class="btn btn-danger" (click)="remove(item)">Xóa</a>
             </td>
         </tr>

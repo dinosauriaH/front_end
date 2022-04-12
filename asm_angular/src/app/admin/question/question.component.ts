@@ -11,7 +11,6 @@ export class QuestionComponent implements OnInit {
 data: Array<any> =[]
   constructor(private questionService: QuestionService, private router: ActivatedRoute) { }
 // id = URLSearchParams
- idurl = new URL(window.location.href) 
  id: string = ""
  idRemove: string = ""
   ngOnInit(): void {

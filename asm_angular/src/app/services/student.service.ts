@@ -18,6 +18,9 @@ export class StudentService {
   lisStudent(): Observable<any>{
     return this.http.get<any>(`${environment.student_api}`)
   }
+  lisStudentOne(id: string): Observable<any>{
+    return this.http.get<any>(`${environment.student_api}/${id}`)
+  }
   removeStudent(id: any){
      this.http.delete<any>(`${environment.student_api}`+'/'+ `${id}`)
      .subscribe(res=>{
