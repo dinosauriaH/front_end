@@ -21,8 +21,6 @@ export class StudentService {
   removeStudent(id: any){
      this.http.delete<any>(`${environment.student_api}`+'/'+ `${id}`)
      .subscribe(res=>{
-       console.log(res);
-       
      })
   }
   // getAll():Observable<listStudents[]>{

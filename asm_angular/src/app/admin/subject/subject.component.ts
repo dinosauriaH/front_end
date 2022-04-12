@@ -21,11 +21,10 @@ export class SubjectComponent implements OnInit {
   removeSub(idSub: any){
     this.subjectService.remove(idSub.id)
     .subscribe(res =>{
-      this.data = res
     })
-    console.log(idSub.id);
+     console.log(idSub.id);
     
-    // this.router.navigate(['/admin/mon-hoc'])
+
   }
 
 

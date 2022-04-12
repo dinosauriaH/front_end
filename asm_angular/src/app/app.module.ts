@@ -23,7 +23,6 @@ import { EditquestionComponent } from './admin/editquestion/editquestion.compone
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 import { environment } from 'src/environments/environment';
-
 @NgModule({
   declarations: [
     AppComponent,
