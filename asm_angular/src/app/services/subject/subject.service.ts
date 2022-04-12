@@ -12,6 +12,9 @@ export class SubjectService {
   lisSubject():Observable<any>{
     return this.http.get<any>(`${environment.subject_api}`)
   }
+  lisSubjectOne(id: string):Observable<any>{
+    return this.http.get<any>(`${environment.subject_api}/${id}`)
+  }
   remove(id: any){
   return  this.http.delete<any>(`${environment.subject_api}/${id}`)
   }
